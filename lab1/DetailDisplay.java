@@ -17,7 +17,7 @@ public class DetailDisplay {
     String section = section_scan.nextLine();
 
     branch_scan = new Scanner(System.in);
-    System.out.print("branch: ");
+    System.out.print("brancsjadhkash: ");
     String branch = branch_scan.nextLine();
 
     System.out.println("name: " + name + "\nroll no: " + roll + "\nsection: " + section + "\nbranch: " + branch);
