@@ -2,29 +2,25 @@ import java.util.Scanner;
 
 public class DetailDisplay {
   public static void main(String[] args) {
-    Scanner name_scan, roll_scan, section_scan, branch_scan;
+    Scanner scan = new Scanner(System.in);
 
-    name_scan = new Scanner(System.in);
     System.out.print("name: ");
-    String name = name_scan.nextLine();
+    String name = scan.nextLine();
 
-    roll_scan = new Scanner(System.in);
     System.out.print("roll no: ");
-    int roll = roll_scan.nextInt();
+    int roll = Integer.parseInt(scan.nextLine());
 
-    section_scan = new Scanner(System.in);
     System.out.print("section: ");
-    String section = section_scan.nextLine();
+    String section = scan.nextLine();
 
-    branch_scan = new Scanner(System.in);
-    System.out.print("brancsjadhkash: ");
-    String branch = branch_scan.nextLine();
+    System.out.print("branch: ");
+    String branch = scan.nextLine();
 
-    System.out.println("name: " + name + "\nroll no: " + roll + "\nsection: " + section + "\nbranch: " + branch);
+    System.out.println("name: " + name);
+    System.out.println("roll no: " + roll);
+    System.out.println("section: " + section);
+    System.out.println("branch: " + branch);
 
-    name_scan.close();
-    roll_scan.close();
-    section_scan.close();
-    branch_scan.close();
+    scan.close();
   }
 }
