@@ -28,7 +28,7 @@ class Rectangle {
   }
 }
 
-class DemoAgain {
+class DemoRect {
   public static void main(String[] args) {
     Rectangle rectangle = new Rectangle();
     rectangle.read();

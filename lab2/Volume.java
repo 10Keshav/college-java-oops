@@ -10,7 +10,7 @@ class Box {
   }
 }
 
-class Demo {
+class DemoBox {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     Box box = new Box();
