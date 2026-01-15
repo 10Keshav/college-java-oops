@@ -23,6 +23,6 @@ class RectOver {
 class DemoRectOverload {
   public static void main(String[] args) {
     RectOver rect = new RectOver(4, 5);
-    rect.area(4, 5);
+    System.out.println(rect.area(4.5, 5.2));
   }
 }
