@@ -6,8 +6,8 @@ class Plastic2D {
   protected final int COST_PER_SQFT = 40;
 
   void getDimensions(int l, int w) {
-    this.length = l;
-    this.width = w;
+    length = l;
+    width = w;
   }
 
   int calcCost() {
