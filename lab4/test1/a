@@ -1,0 +1,18 @@
+write a java programme to input 2 strings and 2 substrings 
+check the first substring in first string 
+and 2nd substring in 2nd string 
+present or not (for both)
+
+if it is present concatenate the 2 substrings
+
+
+
+ask the use rhow many toy details you want to accept
+then the programme will accept the 
+toyid
+toyname
+toyqty
+toyprice
+from the user
+
+and finally the prog will display the individual details of all the toys and grand total of the billing amount
