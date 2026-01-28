@@ -1,37 +1,45 @@
 import java.util.Scanner;
 
-// what
-
 class Students {
   int roll;
-  String name = new String();
-  double cg;
+  String name;
+  float cg;
 
-  void read() {
-    Scanner sc = new Scanner(System.in);
-    System.out.print("roll: ");
-    roll = Integer.parseInt(sc.nextLine());
+  void display() {
+    System.out.println("roll: " + roll);
+    System.out.println("name: " + name);
+    System.out.println("cgpa: " + cg);
+  }
 
-    System.out.print("name: ");
-    name = sc.nextLine();
-
-    System.out.print("cgpa: ");
-    cg = sc.nextDouble();
-
-    sc.close();
+  void mincg() {
+    System.out.println(name + "got the least cgpa yikes: " + cg);
   }
 }
 
-class DemoStudent {
+class Main {
   public static void main(String[] args) {
     int n;
+    int minInd = 0;
+    float prev = 11.0f;
     Scanner sc = new Scanner(System.in);
     System.out.print("no of students: ");
-    Students stu = new Students();
     n = sc.nextInt();
-    sc.close();
+    Students[] stu = new Students[n];
+    System.out.println("roll name cg");
     for (int i = 0; i < n; i++) {
-      stu.read();
+      stu[i] = new Students();
+      stu[i].roll = sc.nextInt();
+      sc.nextLine();
+      stu[i].name = sc.nextLine();
+      stu[i].cg = sc.nextFloat();
+      if (stu[i].cg < prev) {
+        prev = stu[i].cg;
+        minInd = i;
+      }
     }
+    for (int i = 0; i < n; i++)
+      stu[i].display();
+    stu[minInd].mincg();
+    sc.close();
   }
 }
