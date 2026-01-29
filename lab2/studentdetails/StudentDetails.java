@@ -9,10 +9,11 @@ class Students {
     System.out.println("roll: " + roll);
     System.out.println("name: " + name);
     System.out.println("cgpa: " + cg);
+    System.out.println();
   }
 
   void mincg() {
-    System.out.println(name + "got the least cgpa yikes: " + cg);
+    System.out.println(name + " got the least cgpa yikes: " + cg);
   }
 }
 
@@ -28,6 +29,7 @@ class Main {
     System.out.println("roll name cg");
     for (int i = 0; i < n; i++) {
       stu[i] = new Students();
+      System.out.println(String.format("Student %d:", i + 1));
       stu[i].roll = sc.nextInt();
       sc.nextLine();
       stu[i].name = sc.nextLine();
