@@ -1,10 +1,8 @@
 public class Objects {
   static int count = 0;
-  {
-    count++;
-  }
 
-  public Objects() {
+  Objects() {
+    count++;
   }
 
   public static void main(String[] args) {
