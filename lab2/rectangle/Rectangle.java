@@ -6,7 +6,7 @@ class Rectangle {
   int perimeter;
   int area;
 
-  public void read() {
+  void read() {
     Scanner sc = new Scanner(System.in);
     System.out.print("length: ");
     length = sc.nextInt();
@@ -17,12 +17,12 @@ class Rectangle {
     sc.close();
   }
 
-  public void calculate() {
+  void calculate() {
     perimeter = 2 * (length + breadth);
     area = length * breadth;
   }
 
-  public void display() {
+  void display() {
     System.out.println("Perimeter: " + perimeter);
     System.out.println("Area: " + area);
   }
