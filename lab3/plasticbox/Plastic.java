@@ -6,8 +6,8 @@ class Plastic2D {
   protected final int COST_PER_SQFT = 40;
 
   void getDimensions(int l, int w) {
-    length = l;
-    width = w;
+    this.length = l;
+    this.width = w;
   }
 
   int calcCost() {
@@ -46,7 +46,9 @@ public class Plastic {
       sheet.getDimensions(len, wid);
 
       System.out.println("cost of sheet: Rs." + sheet.calcCost());
-    } else if (choice == 2) {
+    }
+
+    else if (choice == 2) {
       Plastic3D box = new Plastic3D();
       System.out.println("length width height");
       int len = sc.nextInt();
