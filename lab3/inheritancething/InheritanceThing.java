@@ -49,7 +49,7 @@ public class InheritanceThing {
     System.out.print("thickness: ");
     int t = sc.nextInt();
 
-    WoodBox wb = new WoodBox(l, w, h, t);
+    new WoodBox(l, w, h, t);
     sc.close();
   }
 }
