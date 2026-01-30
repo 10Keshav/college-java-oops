@@ -7,22 +7,20 @@ class RectOver {
     this.breadth = b;
   }
 
-  int area(int a, int b) {
-    return a * b;
+  RectOver() {
+    length = breadth = 0;
   }
 
-  long area(long a, long b) {
-    return a * b;
-  }
-
-  double area(double a, double b) {
-    return a * b;
+  double area() {
+    return length * breadth;
   }
 }
 
 class DemoRectOverload {
   public static void main(String[] args) {
-    RectOver rect = new RectOver(4, 5);
-    System.out.println(rect.area(4.5, 5.2));
+    RectOver rect1 = new RectOver(4, 5);
+    RectOver rect2 = new RectOver();
+    System.out.println(rect1.area());
+    System.out.println(rect2.area());
   }
 }
