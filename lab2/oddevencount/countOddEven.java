@@ -11,6 +11,5 @@ public class countOddEven {
     }
     System.out.println("odd: " + oddC);
     System.out.println("even: " + evenC);
-
   }
 }
