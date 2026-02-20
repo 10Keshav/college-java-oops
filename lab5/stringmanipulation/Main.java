@@ -34,6 +34,7 @@ public class Main {
     Scanner sc = new Scanner(System.in);
     System.out.print("String: ");
     String str = sc.nextLine();
+    String str2;
 
     int choice = 9;
     while (choice != 0) {
@@ -53,12 +54,15 @@ public class Main {
           break;
 
         case 3:
-          String str2 = sc.next();
+          str2 = sc.next();
           System.out.println(str.equalsIgnoreCase(str2) ? "Yes they are the same" : "No they are not the same");
           break;
 
         case 4:
           str2 = sc.next();
+          StringBuilder temp = new StringBuilder(str);
+          temp.append(str2);
+          System.out.println("After appending: " + temp);
           // insert into anohter
           break;
 
