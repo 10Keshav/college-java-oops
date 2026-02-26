@@ -8,12 +8,8 @@ public class Main {
     int arr[] = new int[n];
 
     try {
-      int i = 0;
-      int num = 0;
-      while (num != 'q') {
-        num = sc.nextInt();
-        arr[i] = num;
-        i++;
+      for (int i = 0; i < n + 1; i++) {
+        arr[i] = sc.nextInt();
       }
     }
 
@@ -21,8 +17,6 @@ public class Main {
       System.out.println("Exception in thread \"main\"");
       System.out.println(e);
     }
-    for (int a : arr)
-      System.out.print(a);
     sc.close();
   }
 }
