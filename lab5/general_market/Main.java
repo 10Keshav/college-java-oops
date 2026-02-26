@@ -8,11 +8,12 @@ public class Main {
     Scanner sc = new Scanner(System.in);
     System.out.print("empoyee id: ");
     int id = sc.nextInt();
+    sc.nextLine();
 
     System.out.print("empoyee name: ");
-    String name = sc.next();
+    String name = sc.nextLine();
 
-    System.out.print("Bobux you get paid: ");
+    System.out.print("Salary: ");
     double basic = sc.nextDouble();
 
     Sales s = new Sales(id, name, basic);
