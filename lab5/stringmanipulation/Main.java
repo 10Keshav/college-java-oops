@@ -5,9 +5,9 @@ class Functions {
 
   public void count(String s) {
     int n = s.length();
-    int vowels = 0, consonants = 0, words = 0;
+    int vowels = 0, consonants = 0, words = 1;
     for (int i = 0; i < n; i++) {
-      char ch = s.charAt(i);
+      char ch = s.toLowerCase().charAt(i);
       if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
         vowels++;
       else if (ch == ' ')
