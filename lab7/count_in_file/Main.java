@@ -1,31 +1,37 @@
 import java.io.*;
+import java.util.Scanner;
 
 public class Main {
   public static void main(String[] args) {
-    String file = args[0];
+    Scanner sc = new Scanner(System.in);
+    System.out.print("file: ");
+    String file = sc.nextLine();
 
-    try (FileInputStream f = new FileInputStream(file)) {
-      int ch = 0;
-      int words = 1;
-      int lines = 1;
-      while (true) {
-        int b = f.read();
-        if (b == ' ')
-          words++;
-        if (b == '\n')
-          lines++;
-        ch++;
-        if (b == -1) {
-          System.out.println("Characters: " + ch);
-          System.out.println("Words: " + words);
-          System.out.println("Lines: " + lines);
-          return;
+    int ch = 0;
+    int words = 0;
+    int lines = 0;
+    try {
+      BufferedReader br = new BufferedReader(new FileReader(file));
+      String line;
+
+      while ((line = br.readLine()) != null) {
+        lines++;
+
+        ch += line.length();
+        String[] wordList = line.trim().split("\\s+");
+        if (!line.trim().isEmpty()) {
+          words += wordList.length;
         }
       }
+      br.close();
+      System.out.println("Characters: " + ch);
+      System.out.println("Words: " + words);
+      System.out.println("Lines: " + lines);
     }
 
     catch (IOException e) {
       System.out.println("error reading files: " + e.getMessage());
     }
+    sc.close();
   }
 }
