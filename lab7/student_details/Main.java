@@ -4,14 +4,11 @@ import java.util.Scanner;
 public class Main {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
-    System.out.print("roll: ");
+    System.out.println("rollno, name, subject, marks, each in a new line");
     long rollno = sc.nextLong();
     sc.nextLine();
-    System.out.print("name: ");
     String name = sc.nextLine();
-    System.out.print("subject: ");
     String subject = sc.nextLine();
-    System.out.print("marks: ");
     float marks = sc.nextFloat();
     try {
       FileWriter fw = new FileWriter("student_details.txt");
