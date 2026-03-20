@@ -32,7 +32,7 @@ class LabTest extends Thread {
   public void run() {
     try {
       for (int i = 1; i <= 5; i++) {
-        System.out.println("Lab Test" + i + "conducted");
+        System.out.println("Lab Test" + i + " conducted");
         Thread.sleep(1000);
       }
     }
